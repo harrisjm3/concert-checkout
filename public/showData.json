@@ -1,0 +1,47 @@
+[
+    {
+        "date": "10/01/2023",
+        "fees": { "orderProcessingFee": 37.99, "serviceFee": 2.99 },
+        "location": "East Rutherford, NJ", 
+        "name": "Taylor Swift",
+        "sellerNotes": "xfr XFER Proof of at least one does of COVID-19 vaccination for ages 5 to 11 and guests ages 12 and up will be required to show proof of two COVID-19 vaccine doeses or one does of the Johnson & Johnson vaccine. Masks must be worn.",
+        "ticketPrice": 109.99,
+        "venue": "Met Life Stadium"
+    },
+    {
+        "date": "10/02/2023",
+        "fees": { "orderProcessingFee": 1.99, "serviceFee": 0.99 },
+        "location": "New York, NY", 
+        "name": "Weird Al Yankovic",
+        "sellerNotes":"Have a great time!",
+        "ticketPrice": 999.99,
+        "venue": "West 79th Street Boat Basin"
+    },
+    {
+        "date": "10/03/2023",
+        "fees": { "orderProcessingFee": 2.99, "serviceFee": 2.99 },
+        "location": "New York, NY", 
+        "name": "They Might Be Giants",
+        "sellerNotes":"Put a little birdhouse in your sould!",
+        "ticketPrice": 29.99,
+        "venue": "Barclays Center"
+    },
+    {
+        "date": "10/04/2023",
+        "fees": { "orderProcessingFee": 17.99, "serviceFee": 0.99 },
+        "location": "New York, NY", 
+        "name": "OK Go",
+        "sellerNotes":"Here it goes again!",
+        "ticketPrice": 19.99,
+        "venue": "Central Park"
+    },
+    {
+        "date": "10/04/2023",
+        "fees": { "orderProcessingFee": 7.99, "serviceFee": 1.99 },
+        "location": "New York, NY", 
+        "name": "Wheetus",
+        "sellerNotes":"Have a great time, teenage dirtbag!",
+        "ticketPrice": 1.99,
+        "venue": "Union Hall"
+    }
+]

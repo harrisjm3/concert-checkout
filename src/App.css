@@ -1,0 +1,28 @@
+
+.sub-error {
+  color: red;
+  margin: 0 auto;
+}
+
+.sub-title {
+  color: gray;
+  margin: 0 auto;
+}
+
+.show-details {
+  font-size:x-small
+}
+
+.gray-text {
+  color: gray;
+}
+
+.split {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.place-order-btn {
+  width: 100%;
+}
