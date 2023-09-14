@@ -61,7 +61,7 @@ const Checkout = ({ quantity=1, selectedShow, setCheckoutClicked }: CheckoutProp
                             <Typography variant="subtitle1">
                                 Use Credit / Debit Card
                             </Typography>
-                        </div>    
+                        </div>  
                         
                     </div>
                 </Grid>

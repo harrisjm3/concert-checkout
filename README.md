@@ -1,3 +1,8 @@
+# Startup
+project expects to run on port 5173. if port not available, change port in useShowData.ts
+```npm run dev```
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
