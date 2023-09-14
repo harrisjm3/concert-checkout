@@ -21,6 +21,12 @@ function App() {
   const [ quantity, setQuantity ] = useState<number>(1);
   const { showData, error } = useShowData();
   const [ checkoutClicked, setCheckoutClicked ] = useState<boolean>(false);
+  const [ selectedCreditCard, setSelectedCreditCard ] = useState<CreditCardInfo>({
+    name: "",
+    cardNumber: 0,
+    expirationDate: 0,
+    cvc: 0,
+  })
 
   return (
     <>
@@ -49,7 +55,14 @@ function App() {
         />
       }
       { checkoutClicked &&
-        <Checkout quantity={quantity} selectedShow={selectedShow} setCheckoutClicked={setCheckoutClicked} /> }
+        <Checkout
+          quantity={quantity}
+          selectedCreditCard={selectedCreditCard}
+          setSelectedCreditCard={setSelectedCreditCard}
+          selectedShow={selectedShow}
+          setCheckoutClicked={setCheckoutClicked}
+        />
+      }
             
 
     </Box>
@@ -59,3 +72,12 @@ function App() {
 }
 
 export default App
+
+
+// normally in a type definition file
+export interface CreditCardInfo {
+  name: string;
+  cardNumber: number;
+  expirationDate: number;
+  cvc: number;
+}

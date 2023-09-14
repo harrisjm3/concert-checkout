@@ -51,8 +51,8 @@ const ShowSelect = ({ error, quantity, selectedShow, setCheckoutClicked, setQuan
                             <Divider orientation="vertical" flexItem />
                             &nbsp;&nbsp;&nbsp;
                             <span className="show-details">
+                                {show.venue}&nbsp;&nbsp;-&nbsp;&nbsp;
                                 {show.location}
-                                {show.venue}
                             </span>
                             
                         </Button>
@@ -68,7 +68,7 @@ const ShowSelect = ({ error, quantity, selectedShow, setCheckoutClicked, setQuan
                     onChange={handleQuantityChange}
                 >
                     {[...new Array(10)].map( (value, index) => ( // using index as key just because of time limitations and not a big deal here
-                        <MenuItem key={index} value={index}>{index}</MenuItem>
+                        <MenuItem key={index} value={index+1}>{index+1}</MenuItem>
                     ))}
                 </Select>
                 <Button variant="contained" disabled={!selectedShow.name || quantity === 0} onClick={(() => setCheckoutClicked(true))}>Checkout</Button>

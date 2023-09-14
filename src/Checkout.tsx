@@ -1,18 +1,22 @@
 import Grid from "@mui/material/Grid";
 import { ShowData } from "./hooks/useShowData";
-import { Button, Typography } from "@mui/material";
+import { Button, Divider, Link, Typography } from "@mui/material";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { useState } from "react";
+import CreditCardSelector from "./CreditCardSelector";
+import { CreditCardInfo } from "./App";
 
 interface CheckoutProps {
     quantity: number;
     selectedShow: ShowData;
+    selectedCreditCard: CreditCardInfo;
+    setSelectedCreditCard: (data: CreditCardInfo) => void;
     setCheckoutClicked: (value: boolean) => void;
 }
 
-const Checkout = ({ quantity=1, selectedShow, setCheckoutClicked }: CheckoutProps) => {
+const Checkout = ({ quantity=1, selectedShow, setCheckoutClicked, selectedCreditCard, setSelectedCreditCard}: CheckoutProps) => {
     const { fees } = selectedShow;
     const dateTicketsAvailable = new Date();
     dateTicketsAvailable.setDate(dateTicketsAvailable.getDate() + 2);
@@ -53,17 +57,31 @@ const Checkout = ({ quantity=1, selectedShow, setCheckoutClicked }: CheckoutProp
                 </Grid>
                 <Grid container 
                     sx={{border: '1px solid grey', borderRadius: '5px', marginTop: '10px', padding: '20px'}}>
-                    <div>
+                    <Grid item xs={12}>
                         <Typography variant="h6">
                             Payment <TaskAltIcon color="success"/>
                         </Typography>
-                        <div>
-                            <Typography variant="subtitle1">
-                                Use Credit / Debit Card
-                            </Typography>
-                        </div>  
-                        
-                    </div>
+                        <Typography variant="subtitle1">
+                            Use Credit / Debit Card
+                        </Typography>
+                        <CreditCardSelector
+                            selectedCreditCard={selectedCreditCard}
+                            setSelectedCreditCard={setSelectedCreditCard}
+                        />
+                        <Divider />
+                    </Grid>
+                    
+                    <Grid item xs={12}>
+                    <Typography variant="subtitle2">
+                        Or Pay With
+                    </Typography>
+                    <Typography variant="body2">
+                        By using a digital wallet and continuing past this page, you have read and are accepting the {
+                            <Link href="#">Terms of Use.</Link>
+                        }
+                    </Typography>
+                    </Grid>
+                    
                 </Grid>
             </Grid>
             <Grid item xs={5} >
