@@ -1,5 +1,8 @@
 # Startup
 project expects to run on port 5173. if port not available, change port in useShowData.ts
+
+To start, run in command line:
+
 ```npm run dev```
 
 
